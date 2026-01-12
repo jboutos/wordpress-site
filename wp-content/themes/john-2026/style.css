@@ -1,0 +1,16 @@
+/**
+ * Theme Name:        John 2026
+ * Description:       Custom theme description...
+ * Version:           0.1
+ * Author:            @mrmusicvibe
+ * Description:       Testing out themes.
+ * Tags:              block-patterns, full-site-editing
+ * Text Domain:       john's-theme
+ * Domain Path:       /assets/lang
+ * License:           GNU General Public License v2.0 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+body {
+	background: dodgerblue;
+}

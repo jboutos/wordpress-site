@@ -2,6 +2,7 @@
  * Theme Name:        John 2026
  * Description:       Custom theme description...
  * Version:           0.1
+ * Requires at least: 5.0
  * Author:            @mrmusicvibe
  * Description:       Testing out themes.
  * Tags:              block-patterns, full-site-editing
@@ -11,6 +12,599 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  */
 
-body {
-	background: dodgerblue;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+	background: dodgerblue;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  background-color: #f0f0f0;
+}
+
+.attention-voice {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+artist-card .explore, genre-info .genre-heading, label-info .label-heading {
+  font-size: 2rem;
+}
+
+.subtle-voice {
+  font-size: 1.4rem;
+}
+
+.miniscule-voice {
+  font-size: 1.2rem;
+}
+
+.calm-voice {
+  font-size: 1rem;
+}
+
+footer .calm-voice, footer a {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+h1, h2, h3 {
+  font-family: "AvertaStd-Bold", sans-serif;;
+}
+
+p, a {
+  font-family: "Inter", sans-serif;
+}
+
+.logo {
+  font-size: clamp(1rem, 5vw, 2rem);
+
+}
+
+p {
+  max-width: 70ch;
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.album-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1em;
+  row-gap: 3em;
+  margin-bottom: 2em;
+}
+
+.search-container {
+  position: relative;
+  max-width: 700px; 
+  min-width: 100px;
+  flex: 1;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 10px 40px 10px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+.search-container .search-btn {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  background: #FF1A1A;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+  padding: 11px 10px;
+}
+
+.search-btn svg {
+  display: block;
+  width: 18px;
+
+  fill: white;
+}
+
+call-to-action {
+  display: block;
+  padding: 5em 0;
+}
+
+.search-container .search-btn:hover {
+  color: #000;
+}
+
+.pin svg, .mail svg, .user svg, .hamburger svg, .phone svg, .search svg, .socials svg, .mail2 svg {
+	width: 25px;
+}
+
+.mail svg {
+  fill: black;
+}
+
+.header-menu {
+  background-color: #f0f0f0;
+}
+
+.pin, .mail {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.search-container {
+  flex: 1;
+}
+
+inner-column {
+  display: block;
+  max-width: 1400px;
+  padding: 1em;
+  margin: 0 auto;
+}
+
+header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3em;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+.user-menu a {
+  padding: 1.14em;
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}
+
+a.user.hamburger {
+  @media (max-width: 600px) {
+    padding: 1.15em 1.4em;
+  }
+}
+
+.options a {
+  padding: 1.4em 1.4em;
+}
+
+nav.user-menu {
+  padding: 0;
+}
+
+.header-menu-bottom a {
+  color: white;
+}
+
+.user-menu svg {
+  fill: currentColor;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  background-color: black;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex: 1;
+
+  @media (min-width: 680px) {
+    flex-direction: row;
+    gap: 2em;
+  }
+}
+
+nav.options {
+  padding: 0;
+}
+
+.container a, .container span {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.options a:hover {
+  @media (max-width: 600px) {
+    background-color: transparent;
+  }
+
+  background-color: white;
+  color: black;
+}
+
+.header-menu-bottom inner-column {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.hamburger {
+  fill: white;
+  background-color: transparent;
+
+  @media (min-width: 600px) {
+    display: none;
+  }
+}
+
+.shopping {
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+header-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.mini-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+
+  @media (min-width: 1100px) {
+    flex-direction: row;
+    gap: 3em;
+  }
+}
+
+.header-menu-bottom {
+  position: sticky;
+  top: 0;
+  background-color: #FF1A1A;
+  color: white;
+}
+
+.socials svg {
+  fill: white
+}
+
+footer {
+
+  @media (max-width: 770px) {
+    padding-top: 8em;
+  }
+
+  padding-top: 4em;
+}
+
+footer, footer a  {
+  background-color: black;
+  color: white;
+}
+
+footer svg, footer .mail {
+  fill: white;
+}
+
+.phone, .mail2, .search {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.inner-links {
+  display: flex;
+  gap: 1em;
+}
+
+.inner-links ul {
+  padding: 0;
+}
+
+footer li {
+  display: list-item;
+  list-style-position: inside;
+  padding: 0;
+
+  @media (min-width: 770px) {
+    list-style-position: outside;
+  }
+}
+
+.inner-links nav:nth-of-type(1) {
+  @media (min-width: 770px) {
+    padding-left: 0.8em;
+  }
+}
+
+footer ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+li + li {
+  margin-top: 1em;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  @media (min-width: 770px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between; 
+    gap: 5rem;
+  }
+
+  @media (min-width: 1100px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between; 
+    gap: 15rem;
+  }
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  @media (min-width: 770px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between; 
+    gap: 5rem; 
+    margin-top: 4em;
+    margin-bottom: 2em;
+  }
+
+  @media (min-width: 1100px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between; 
+    gap: 15rem; 
+    margin-top: 4em;
+    margin-bottom: 2em;
+  }
+}
+
+.search {
+  @media(max-width:770px) {
+    margin-bottom: 2em;
+  }
+}
+
+.socials {
+  display: flex;
+  gap: 1em;
+}
+
+.inner-links nav {
+  flex: 1;
+}
+
+ul {
+  padding: 0;
+}
+
+.album-preview {
+  @media (min-width: 800px) {
+    display: flex;
+    gap: 3em;
+  }
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}
+
+.review p:first-of-type {
+  margin-top: 0;
+}
+
+.add-to-cart {
+  display: inline-block;
+  margin-top: 2em;
+  padding: 0.8em 1em;
+  background-color: black;
+  color: white;
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}
+
+songs-list {
+  display: block;
+  margin-bottom: 1em; 
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 300px;  
+  padding: 30px;
+  background-color: #1b1919;
+}
+
+.signup-container input,
+.signup-container button {
+  padding: 0.8em 1em;
+  width: 100%;  
+}
+
+foote button, footer input {
+  text-align: center;
+}
+
+footer button {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  margin-top: 0.3em;
+}
+
+h4 + a, h4 + p, h4 + div, .schedule h4, .socials {
+  margin-top: 1.3em;
+}
+
+.album-preview h3, artist-card h3 {
+  margin: 0.4em 0 0.3em 0;
+}
+
+p + p {
+  margin-top: 0.3em;
+}
+
+call-to-action h2, featured-albums h2, artist-card h2, genre-info h2, label-info h2 {
+  margin-bottom: 1em;
+}
+
+.review p + p {
+  margin-top: 1em;
+}
+
+.explore, .genre-heading, .label-heading {
+  margin-top: 2em;
+}
+
+.track-list {
+  margin-bottom: 0.5em;
+}
+
+call-to-action a {
+  display: inline-block;
+  margin-top: 2em;
+  padding: 0.8em 1em;
+  background-color: black;
+  color: white;
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}
+
+.inner-links a:hover {
+  color: lightgray;
+}
+
+footer ul li::marker {
+  color: #FF1A1A;
+}
+
+footer span:hover {
+  color: #FF1A1A;
+}
+
+.copyright {
+  padding: 1em 0;
+}
+
+.newsletter {
+  @media (max-width: 770px) {
+    margin-bottom: 2em;
+  }
+}
+
+collection, second-hand-albums {
+  display: block;
+  padding: 5em 0;
+}
+
+collection h2, second-hand-albums h2 {
+  margin-bottom: 1em;
+}
+
+picture {
+  display: block;
+}
+
+label-info .label-logo {
+  margin-top: 5em;
+}
+
+.artist-image {
+  margin-top: 5em;
+}
+
+.artist-name {
+  @media (min-width: 700px) {
+    margin-top: 1.8em;
+  }
+}
+
+.label-flex {
+  @media (min-width: 700px) {
+    display: flex;
+    gap: 2em;
+  }
+}
+
+.artist-flex {
+  @media (min-width: 700px) {
+    display: flex;
+    gap: 2em;
+  }
+}
+
+.record-label-name {
+  @media (min-width: 700px) {
+    margin-top: 1.8em;
+  }
+}
+
+.label-link {
+  display: inline-block;
+  text-decoration: underline;
+  margin-top: 1em;
+}
+
+songs-list ul {
+  list-style: none;
+}
+
+songs-list li {
+  list-style-position: inside;
+  font-weight: 500;
+}
+

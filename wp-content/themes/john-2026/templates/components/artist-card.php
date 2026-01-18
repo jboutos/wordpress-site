@@ -18,7 +18,6 @@
 	<h2 class='attention-voice explore'>Explore albums from this artist:</h2>
 
 	<?php
-  // Example: show albums for this label
   $args = array(
       'post_type'  => 'albums',
       'meta_query' => array(

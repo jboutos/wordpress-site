@@ -15,7 +15,6 @@
 	<h2 class='attention-voice label-heading'>Albums on this label:</h2>
 
 	<?php
-	// Example: show albums for this label
 	$args = array(
 	   'post_type'  => 'albums',
 	   'meta_query' => array(

@@ -52,6 +52,7 @@
 							<a class='user hamburger' href='#'>
 								<?php include('images/hamburger.php'); ?>
 							</a>
+							<!--
 							<a class='shopping' href="<?php echo get_permalink(get_page_by_title('Album Collection')); ?>">
 							    Collection
 							</a>
@@ -61,6 +62,8 @@
 							<a class='shopping' href="#">
 							    On Sale
 							</a>
+							-->
+							<?php include('templates/site-menu.php'); ?>
 						</nav>
 
 						<nav class='user-menu'>

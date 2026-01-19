@@ -55,7 +55,7 @@
         $loop = new WP_Query($args);
 
         // Only include songs-card if we have songs
-        if ( $loop->have_posts() ) :
+
         ?>
         <p class='calm-voice track-list'><strong>Track list:</strong></p>
         <ol>
@@ -64,8 +64,9 @@
                 include __DIR__ . '/songs-card.php';
             endwhile; 
             wp_reset_postdata();
-        endif; ?>
+        ?>
         </ol>
+        <p><strong>Price: </strong>$<?php the_field('price'); ?></p>
         <a class='add-to-cart' href='#'>Add to cart</a>
         <?php endif; ?>
     </div> 

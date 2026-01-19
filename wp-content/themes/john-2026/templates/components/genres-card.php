@@ -22,12 +22,12 @@
     <?php
 
     // Only include album-preview if we have songs
-    if ( $loop->have_posts() ) :
+
         while ( $loop->have_posts() ) : $loop->the_post();
             include __DIR__ . '/album-preview.php';
         endwhile; ?>
-     	  </ul>
-     	  <?php
-        wp_reset_postdata();
-    endif; ?>
+    </ul>
+    <?php
+    wp_reset_postdata();
+    ?>
 </genre-info>

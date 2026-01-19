@@ -56,11 +56,15 @@ footer .calm-voice, footer a {
   font-weight: 300;
 }
 
+.footer-contact a {
+  font-size: 1.1rem;
+}
+
 h1, h2, h3 {
   font-family: "AvertaStd-Bold", sans-serif;;
 }
 
-p, a {
+p, a, li {
   font-family: "Inter", sans-serif;
 }
 
@@ -255,7 +259,11 @@ nav.options {
 
 .hamburger {
   fill: white;
-  background-color: transparent;
+  background-color: transparent !important;
+
+  &:hover {
+    background-color: transparent;
+  }
 
   @media (min-width: 600px) {
     display: none;
@@ -298,11 +306,11 @@ header-top {
 
 footer {
 
-  @media (max-width: 770px) {
+  padding-top: 5em;
+
+  @media (min-width: 770px) {
     padding-top: 8em;
   }
-
-  padding-top: 4em;
 }
 
 footer, footer a  {
@@ -495,7 +503,16 @@ p + p {
   margin-top: 0.3em;
 }
 
-call-to-action h2, featured-albums h2, artist-card h2, genre-info h2, label-info h2 {
+featured-albums h2 {
+  margin-bottom: 1em;
+}
+
+call-to-action h2, artist-card h2, genre-info h2, label-info h2 {
+  margin-bottom: 0.4em;
+}
+
+on-sale h2 {
+  margin-top: 2em;
   margin-bottom: 1em;
 }
 
@@ -605,6 +622,49 @@ songs-list ul {
 
 songs-list li {
   list-style-position: inside;
-  font-weight: 500;
+  font-weight: 0;
 }
 
+.my_extra_menu_class {
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+.my_extra_menu_class ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.my_extra_menu_class li {
+  margin: 0;
+  padding: 0;
+}
+
+.my_extra_menu_class li a {
+    display: block;
+}
+
+.old-price {
+  text-decoration: line-through;.
+}
+
+.old-price + p {
+  margin-top: 0;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 0.3em;
+}
+
+footer hr {
+  border: none;
+  height: 0.5px;
+  background-color: gray;
+}
